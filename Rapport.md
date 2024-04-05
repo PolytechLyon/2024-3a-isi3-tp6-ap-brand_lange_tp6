@@ -16,8 +16,14 @@ Noms des étudiants du binôme : Rémi Brand - Matéo Lange
 > Le constructeur de la classe `Clock` est privé pour empêcher l'instanciation de la classe en dehors de la classe elle-même. La méthode `getInstance()` permet de récupérer l'instance unique de la classe `Clock`. Si l'instance n'existe pas, elle est créée. Sinon, l'instance existante est retournée. Ainsi, il n'y a qu'une seule instance de la classe `Clock` dans l'application.
 
 ## Exercices 4
+> Les classes `Bike` et `Wheel` n'appartiennent pas au même paquetage. C'est une dépendance cyclique entre les deux classes. Cette dépendance n'adhère pas aux bonnes pratiques de conception.
+>
+> La classe `Wheel` utilise la méthode `getPush` de la classe `Bike`. La classe `Vehicle` est une abstraction de la classe `Bike` qui isole cette fonctionnalité, présente dans le paquetage transport.
+>
+> Pour casser la dépendance cyclique entre les classes `Bike` et `Wheel`, on peut utiliser la classe abstraite `Vehicle` qui isole la fonctionnalité de la classe `Bike` utilisée par la classe `Wheel`. La classe `Wheel` n'aura plus besoin de référence à la classe `Bike` pour obtenir l'effort appliqué. Ainsi, la dépendance cyclique entre les deux classes est cassée.
 
 ## Exercices 5
+>
 
 ## Exercices 6
 
