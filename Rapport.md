@@ -23,7 +23,7 @@ Noms des étudiants du binôme : Rémi Brand - Matéo Lange
 > Pour casser la dépendance cyclique entre les classes `Bike` et `Wheel`, on peut utiliser la classe abstraite `Vehicle` qui isole la fonctionnalité de la classe `Bike` utilisée par la classe `Wheel`. La classe `Wheel` n'aura plus besoin de référence à la classe `Bike` pour obtenir l'effort appliqué. Ainsi, la dépendance cyclique entre les deux classes est cassée.
 
 ## Exercices 5
->
+> La methode `log` de la classe `NamedLogger` est désormais une méthode template. Elle appelle la méthode `format` qui formatte le message de log en utilisant le format spécifié et les arguments passés à la méthode `log`. `log` appelle ensuite la méthode `write` qui est une méthode abstraite. Cette méthode est implémentée dans les classes `FileLogger` et `ConsoleLogger` pour écrire le message de log dans un fichier ou sur la console. Si on veut ajouter un nouveau type de logger, il suffit de créer une nouvelle classe qui hérite de `NamedLogger` et d'implémenter la méthode `write` pour écrire le message de log dans le nouveau type de logger.
 
 ## Exercices 6
 

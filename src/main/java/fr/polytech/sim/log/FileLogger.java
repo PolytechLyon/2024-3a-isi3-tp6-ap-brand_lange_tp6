@@ -12,16 +12,14 @@ public class FileLogger extends NamedLogger {
     /**
      * Constructor.
      *
-     * @param name  logger name.
+     * @param name logger name.
      */
     public FileLogger(String name) {
         super(name);
     }
 
     @Override
-    synchronized public void log(String format, Object... args) {
-        String entry = String.format(format, args);
-        String message = String.format("%s\t%s\n", this.name, entry);
+    synchronized protected void write(String message) {
         try (FileWriter fileWriter = new FileWriter(FILE_NAME, true)) {
             fileWriter.write(message);
         } catch (IOException e) {
