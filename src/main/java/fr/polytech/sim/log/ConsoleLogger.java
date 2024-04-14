@@ -6,11 +6,12 @@ package fr.polytech.sim.log;
 public class ConsoleLogger extends NamedLogger {
 
     /**
-     * Constructor.
+     * Constructor. It is package private to prevent instantiation from anything
+     * other than the LoggerFactory.
      *
      * @param name logger name.
      */
-    public ConsoleLogger(String name) {
+    ConsoleLogger(String name) {
         super(name);
     }
 

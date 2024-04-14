@@ -10,11 +10,12 @@ public class FileLogger extends NamedLogger {
     private static final String FILE_NAME = "logs.txt";
 
     /**
-     * Constructor.
+     * Constructor. It is package private to prevent instantiation from anything
+     * other than the LoggerFactory.
      *
      * @param name logger name.
      */
-    public FileLogger(String name) {
+    FileLogger(String name) {
         super(name);
     }
 

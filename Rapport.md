@@ -26,6 +26,7 @@ Noms des étudiants du binôme : Rémi Brand - Matéo Lange
 > La methode `log` de la classe `NamedLogger` est désormais une méthode template. Elle appelle la méthode `format` qui formatte le message de log en utilisant le format spécifié et les arguments passés à la méthode `log`. `log` appelle ensuite la méthode `write` qui est une méthode abstraite. Cette méthode est implémentée dans les classes `FileLogger` et `ConsoleLogger` pour écrire le message de log dans un fichier ou sur la console. Si on veut ajouter un nouveau type de logger, il suffit de créer une nouvelle classe qui hérite de `NamedLogger` et d'implémenter la méthode `write` pour écrire le message de log dans le nouveau type de logger.
 
 ## Exercices 6
+> La différence entre le pattern factory et le pattern singleton est que le pattern factory garantit qu'un seul type d'objet est créé, tandis que le pattern singleton garantit qu'une seule instance d'un objet est créée.
 
 ## Exercices 7
 
