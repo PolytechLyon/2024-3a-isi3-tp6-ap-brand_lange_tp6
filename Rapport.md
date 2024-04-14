@@ -28,9 +28,11 @@ Noms des étudiants du binôme : Rémi Brand - Matéo Lange
 ## Exercices 6
 > La différence entre le pattern factory et le pattern singleton est que le pattern factory garantit qu'un seul type d'objet est créé, tandis que le pattern singleton garantit qu'une seule instance d'un objet est créée.
 
-## Exercices 7
-
 ## Exercices 8
+> Dans la classe `Context`, on utilise le pattern Facade pour intéragir avec la classe `ServiceLoader`.
+
+> Oui, on peut avoir plusieurs lignes dans le fichier fr.polytech.sim.cycling.Bike. Chaque ligne correspond à une implémentation concrète de l'interface `Bike`.
+## Exercices 9
 
 ## Exercices 9
 > La méthode `injectAll` de la classe `Context` retourne un `Iterator<T>`, ce qui suggère l'utilisation du pattern Iterator pour parcourir les éléments disponibles dans le contexte. Cela permet de parcourir les éléments du contexte sans exposer la structure interne du contexte.
