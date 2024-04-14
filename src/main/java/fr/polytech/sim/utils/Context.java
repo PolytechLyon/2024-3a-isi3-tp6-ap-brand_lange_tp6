@@ -14,8 +14,8 @@ public class Context {
      * return null.
      *
      * @param klass expected injection type
-     * @return      instance provided by first service provider, null if none
-     * @param <T>   expected instance type
+     * @return instance provided by first service provider, null if none
+     * @param <T> expected instance type
      */
     public static <T> T inject(Class<T> klass) {
         Iterator<T> iterator = ServiceLoader.load(klass).iterator();
@@ -31,11 +31,11 @@ public class Context {
      * exists, the method return an empty iterator.
      *
      * @param klass expected injection type
-     * @return      an iterator over all instances provided by service provider
-     * @param <T>   expected instance type
+     * @return an iterator over all instances provided by service provider
+     * @param <T> expected instance type
      */
     public static <T> Iterator<T> injectAll(Class<T> klass) {
-        /* TODO: implement the right logic */
-        throw new UnsupportedOperationException("Method not implemented");
+        ServiceLoader<T> loader = ServiceLoader.load(klass);
+        return loader.iterator();
     }
 }

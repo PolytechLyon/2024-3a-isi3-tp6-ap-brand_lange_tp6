@@ -32,4 +32,5 @@ Noms des étudiants du binôme : Rémi Brand - Matéo Lange
 
 ## Exercices 8
 
-
+## Exercices 9
+> La méthode `injectAll` de la classe `Context` retourne un `Iterator<T>`, ce qui suggère l'utilisation du pattern Iterator pour parcourir les éléments disponibles dans le contexte. Cela permet de parcourir les éléments du contexte sans exposer la structure interne du contexte.
