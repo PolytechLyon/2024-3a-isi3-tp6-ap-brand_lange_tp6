@@ -1,23 +1,24 @@
 package fr.polytech.sim.transport;
 
-import fr.polytech.sim.log.ConsoleLogger;
 import fr.polytech.sim.log.Logger;
-import java.util.HashSet;
+import fr.polytech.sim.log.LoggerFactory;
+
 import java.util.Iterator;
-import java.util.Set;
+import java.util.List;
+import java.util.ArrayList;
 
 /**
  * Vehicle abstraction.
  */
 public abstract class Vehicle implements MobileObject {
 
-    private final Logger logger = new ConsoleLogger("Vehicle");
-    protected final Set<MobileObject> components = new HashSet<>();
+    private final Logger logger = LoggerFactory.createFileLogger("Vehicle");
+    protected final List<MobileObject> components = new ArrayList<>();
 
     /**
      * Force applied to push the vehicle.
      *
-     * @return  push force.
+     * @return push force.
      */
     public abstract double getPush();
 
@@ -37,8 +38,7 @@ public abstract class Vehicle implements MobileObject {
             sumPonderedVelocities += item.getVelocity() * item.getMass();
             sumMass += item.getMass();
         }
-        double velocity = sumPonderedVelocities == 0 ? 0 :
-                sumPonderedVelocities / sumMass;
+        double velocity = sumPonderedVelocities == 0 ? 0 : sumPonderedVelocities / sumMass;
         this.logger.log("Velocity %.2f Km/h.", velocity);
         return velocity;
     }
